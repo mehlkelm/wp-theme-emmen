@@ -523,3 +523,24 @@ body {
 }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---------- Lightbox: always show the original aspect ratio ----------
+   Core's lightbox keeps the cropped gallery ratio for its container and
+   clips the full image. Resize the container to the image's own ratio,
+   fitted to the viewport (tan/atan2 divides the px-valued custom props). */
+
+.wp-lightbox-overlay .lightbox-image-container {
+  --emmen-lightbox-fit: min(
+    calc(tan(atan2(min(92vw, var(--wp--lightbox-image-width)), var(--wp--lightbox-image-width)))),
+    calc(tan(atan2(min(92vh, var(--wp--lightbox-image-height)), var(--wp--lightbox-image-height))))
+  );
+  width: calc(var(--wp--lightbox-image-width) * var(--emmen-lightbox-fit)) !important;
+  height: calc(var(--wp--lightbox-image-height) * var(--emmen-lightbox-fit)) !important;
+}
+
+.wp-lightbox-overlay .lightbox-image-container figure,
+.wp-lightbox-overlay .lightbox-image-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
