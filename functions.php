@@ -49,6 +49,47 @@ function emmen_sidecol_toggle_script() {
 }
 add_action( 'wp_footer', 'emmen_sidecol_toggle_script' );
 
+/**
+ * Core's lightbox sizes its container to the cropped gallery ratio and
+ * clips the full image. Re-fit the container vars to the image's own
+ * ratio whenever the lightbox opens or navigates; core's centering and
+ * zoom math then use the corrected size.
+ */
+function emmen_lightbox_ratio_script() {
+	?>
+	<script>
+	( function () {
+		var overlay = null;
+		function refit() {
+			var cs = getComputedStyle( overlay );
+			var iw = parseFloat( cs.getPropertyValue( '--wp--lightbox-image-width' ) );
+			var ih = parseFloat( cs.getPropertyValue( '--wp--lightbox-image-height' ) );
+			if ( ! iw || ! ih ) return;
+			var fit = Math.min( 0.92 * innerWidth / iw, 0.92 * innerHeight / ih );
+			var w = Math.round( iw * fit ), h = Math.round( ih * fit );
+			if ( parseFloat( cs.getPropertyValue( '--wp--lightbox-container-width' ) ) !== w ) {
+				overlay.style.setProperty( '--wp--lightbox-container-width', w + 'px' );
+				overlay.style.setProperty( '--wp--lightbox-container-height', h + 'px' );
+			}
+		}
+		function init() {
+			overlay = document.querySelector( '.wp-lightbox-overlay' );
+			if ( ! overlay ) return;
+			new MutationObserver( function () {
+				if ( overlay.classList.contains( 'active' ) ) refit();
+			} ).observe( overlay, { attributes: true, attributeFilter: [ 'class', 'style' ] } );
+		}
+		if ( document.readyState === 'loading' ) {
+			document.addEventListener( 'DOMContentLoaded', init );
+		} else {
+			init();
+		}
+	} )();
+	</script>
+	<?php
+}
+add_action( 'wp_footer', 'emmen_lightbox_ratio_script' );
+
 function emmen_scripts() {
 	wp_enqueue_style( 'emmen-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 }

@@ -526,17 +526,9 @@ body {
 
 /* ---------- Lightbox: always show the original aspect ratio ----------
    Core's lightbox keeps the cropped gallery ratio for its container and
-   clips the full image. Resize the container to the image's own ratio,
-   fitted to the viewport (tan/atan2 divides the px-valued custom props). */
-
-.wp-lightbox-overlay .lightbox-image-container {
-  --emmen-lightbox-fit: min(
-    calc(tan(atan2(min(92vw, var(--wp--lightbox-image-width)), var(--wp--lightbox-image-width)))),
-    calc(tan(atan2(min(92vh, var(--wp--lightbox-image-height)), var(--wp--lightbox-image-height))))
-  );
-  width: calc(var(--wp--lightbox-image-width) * var(--emmen-lightbox-fit)) !important;
-  height: calc(var(--wp--lightbox-image-height) * var(--emmen-lightbox-fit)) !important;
-}
+   clips the full-size image. The container vars are re-fitted to the
+   image ratio from JS (see functions.php); these rules make the image
+   fill whatever container results. */
 
 .wp-lightbox-overlay .lightbox-image-container figure,
 .wp-lightbox-overlay .lightbox-image-container img {
