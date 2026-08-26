@@ -14,5 +14,10 @@
 				}
 			}
 		}
+	},
+	"styles": {
+		"typography": {
+			"fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif"
+		}
 	}
 }
