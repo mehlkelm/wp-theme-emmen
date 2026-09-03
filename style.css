@@ -3,7 +3,7 @@ Theme Name: Emmen
 Theme URI: https://stefan.pauwels.ch
 Author: Stefan Pauwels
 Description: An image-light blog theme in the Swiss / International Typographic Style. Strict grid, Helvetica, generous whitespace, green accent.
-Version: 1.0.3
+Version: 1.0.4
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 Text Domain: emmen
@@ -34,8 +34,10 @@ Text Domain: emmen
 * { box-sizing: border-box; }
 
 /* Keep the front-end reset out of Gutenberg's iframe; core owns its canvas spacing. */
-body:not(.editor-styles-wrapper),
-body:not(.editor-styles-wrapper) * { margin: 0; padding: 0; }
+:where(body:not(.editor-styles-wrapper), body:not(.editor-styles-wrapper) *) {
+  margin: 0;
+  padding: 0;
+}
 
 html { -webkit-text-size-adjust: 100%; font-size: clamp(100%, 87.5% + 0.55vw, 131.25%); }
 
