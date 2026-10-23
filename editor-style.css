@@ -1,0 +1,100 @@
+:root {
+  --accent: #00874a;
+  --ink: #111111;
+  --ink-soft: #555555;
+  --paper: #ffffff;
+  --rule: #111111;
+  --rule-light: #d9d9d9;
+  --measure: 34rem;
+}
+
+.editor-styles-wrapper {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(16px, 14px + .55vw, 21px);
+  line-height: 1.5;
+  font-feature-settings: "tnum";
+}
+
+.editor-styles-wrapper .wp-block-post-title,
+.editor-styles-wrapper > .is-root-container {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+.editor-styles-wrapper .wp-block-post-title {
+  margin-bottom: 1.5rem;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+}
+
+.editor-styles-wrapper p { line-height: 1.5; }
+
+.editor-styles-wrapper a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.editor-styles-wrapper a:hover { color: var(--accent); }
+
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4 {
+  margin-top: 2rem;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+}
+
+.editor-styles-wrapper h2 { font-size: 1.5rem; }
+.editor-styles-wrapper h3 { font-size: 1.1875rem; }
+.editor-styles-wrapper h4 { font-size: 1rem; letter-spacing: .06em; text-transform: uppercase; }
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol { padding-left: 1.25rem; }
+
+.editor-styles-wrapper blockquote {
+  padding-left: 1.25rem;
+  color: var(--ink-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 2px 0 0 2px;
+}
+
+.editor-styles-wrapper pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule-light);
+  font-size: .875rem;
+  line-height: 1.45;
+}
+
+.editor-styles-wrapper code { font-size: .9em; }
+.editor-styles-wrapper img { max-width: 100%; height: auto; }
+.editor-styles-wrapper hr { border: 0; border-top: 1px solid var(--rule-light); }
+.editor-styles-wrapper figcaption { color: var(--ink-soft); font-size: .75rem; }
+
+.editor-styles-wrapper .wp-block-button__link {
+  color: var(--paper);
+  background: var(--accent);
+  border-radius: 6px;
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.editor-styles-wrapper .wp-block-separator { border-color: var(--rule-light); }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #2fbf71;
+    --ink: #ececec;
+    --ink-soft: #9a9a9a;
+    --paper: #131313;
+    --rule: #ececec;
+    --rule-light: #333333;
+  }
+}
