@@ -21,10 +21,10 @@ jobs:
 
       - name: Build emmen.zip
         run: |
-          mkdir -p build/emmen
-          rsync -a --exclude-from=.distignore ./ build/emmen/
-          (cd build && zip -rq ../emmen.zip emmen)
-          unzip -l emmen.zip | head -20
+          mkdir -p "$RUNNER_TEMP/build/emmen"
+          rsync -a --exclude-from=.distignore ./ "$RUNNER_TEMP/build/emmen/"
+          (cd "$RUNNER_TEMP/build" && zip -rq "$GITHUB_WORKSPACE/emmen.zip" emmen)
+          unzip -l emmen.zip
 
       - name: Publish release
         uses: softprops/action-gh-release@v2
