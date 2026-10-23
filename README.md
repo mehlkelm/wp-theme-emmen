@@ -13,7 +13,7 @@ The theme checks this repository's releases and offers new versions through the 
 ## Releasing
 
 1. Bump `Version:` in `style.css` and commit.
-2. Tag it: `git tag v1.2.1 && git push --tags`.
+2. Tag it: `git tag v1.2.2 && git push --tags`.
 3. The release workflow builds `emmen.zip` and attaches it to a GitHub release. Sites pick it up on their next update check.
 
 ## Site-specific styles

@@ -217,7 +217,7 @@ function emmen_github_update( $update, $theme_data, $theme_stylesheet ) {
 		'version'      => $release['version'],
 		'url'          => $release['url'],
 		'package'      => $release['package'],
-		'requires_php' => $theme_data['RequiresPHP'],
+		'requires_php' => wp_get_theme( $theme_stylesheet )->get( 'RequiresPHP' ),
 	);
 }
 add_filter( 'update_themes_github.com', 'emmen_github_update', 10, 3 );

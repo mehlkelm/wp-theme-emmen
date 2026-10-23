@@ -30,4 +30,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: emmen.zip
+          make_latest: true
           generate_release_notes: true
