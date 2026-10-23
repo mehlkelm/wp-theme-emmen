@@ -1,0 +1,37 @@
+/* Slow Feeds product page blocks, see product-pages.css. */
+.editor-styles-wrapper .slowfeeds-hero { min-height: 29rem; padding: 1.5rem 0 4rem; position: relative; }
+.editor-styles-wrapper .slowfeeds-icon { float: right; margin: 0 0 1rem 2rem; }
+.editor-styles-wrapper .slowfeeds-icon img { border-radius: 24%; box-shadow: 0 12px 30px rgba(0,0,0,.14); }
+.editor-styles-wrapper .slowfeeds-kicker { color: var(--accent); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.editor-styles-wrapper h2.slowfeeds-display { max-width: 39rem; margin: 1.25rem 0 1.15rem; font-size: clamp(3rem, 8vw, 5.7rem); line-height: .96; letter-spacing: -.045em; }
+.editor-styles-wrapper .slowfeeds-lead { max-width: 35rem; color: var(--ink-soft); font-size: 1.1rem; line-height: 1.6; }
+.editor-styles-wrapper .slowfeeds-actions { margin-top: 1.5rem; }
+.editor-styles-wrapper .wp-block-button__link { border-radius: 5px; background: var(--accent); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.editor-styles-wrapper .slowfeeds-phones { max-width: 34rem; margin: -3rem auto 0; gap: 1rem; align-items: end; }
+.editor-styles-wrapper .slowfeeds-phones figure { overflow: hidden; border-radius: 1.4rem; box-shadow: 0 20px 45px rgba(0,0,0,.16); }
+.editor-styles-wrapper .slowfeeds-phones figure:first-child { transform: rotate(-2deg); }
+.editor-styles-wrapper .slowfeeds-phones figure:last-child { transform: rotate(2deg) translateY(2rem); }
+.editor-styles-wrapper .slowfeeds-section { margin-top: 6rem; padding-top: 1.5rem; border-top: 3px solid var(--rule); }
+.editor-styles-wrapper .slowfeeds-section h2 { max-width: 39rem; margin: .55rem 0 1.15rem; font-size: clamp(2rem, 5vw, 4rem); line-height: .96; letter-spacing: -.045em; }
+.editor-styles-wrapper .slowfeeds-section > p:not(.slowfeeds-kicker) { max-width: 34rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
+.editor-styles-wrapper .frequency-scale { max-width: 34rem; margin-top: 2rem; display: flex; align-items: center; gap: .75rem; color: var(--accent); }
+.editor-styles-wrapper .frequency-scale i { height: 4px; flex: 1; position: relative; background: var(--rule-light); border-radius: 9px; }
+.editor-styles-wrapper .frequency-scale i b { display: block; width: 31%; height: 100%; position: relative; background: var(--accent); }
+.editor-styles-wrapper .frequency-scale i b::after { content: ""; width: 1rem; height: 1rem; position: absolute; top: -.4rem; right: -.5rem; background: var(--paper); border: 3px solid var(--accent); border-radius: 50%; }
+.editor-styles-wrapper .frequency-labels { max-width: 34rem; display: flex; justify-content: space-between; margin: .6rem 1.8rem 0; color: var(--ink-soft); font-size: .58rem; letter-spacing: .08em; text-transform: uppercase; }
+.editor-styles-wrapper .slowfeeds-mac-shot { margin-top: 2rem; overflow: hidden; border: 1px solid var(--rule-light); border-radius: .6rem; box-shadow: 0 18px 40px rgba(0,0,0,.15); }
+.editor-styles-wrapper .slowfeeds-mac-shot figcaption { padding: .55rem .75rem; color: var(--ink-soft); font-size: .65rem; text-align: left; }
+.editor-styles-wrapper .slowfeeds-feature-grid { margin-top: 2rem; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--rule-light); border-left: 1px solid var(--rule-light); }
+.editor-styles-wrapper .slowfeeds-feature-grid article { min-height: 12rem; padding: 1.15rem; border-right: 1px solid var(--rule-light); border-bottom: 1px solid var(--rule-light); }
+.editor-styles-wrapper .slowfeeds-feature-grid b { color: var(--accent); font-size: .65rem; }
+.editor-styles-wrapper .slowfeeds-feature-grid h3 { margin: 2.2rem 0 .45rem; font-size: 1.05rem; }
+.editor-styles-wrapper .slowfeeds-feature-grid p { color: var(--ink-soft); font-size: .75rem; line-height: 1.55; }
+.editor-styles-wrapper .slowfeeds-service-list { margin-top: 1.7rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+.editor-styles-wrapper .slowfeeds-service-list span { padding: .75rem; border: 1px solid var(--rule-light); border-radius: 5px; font-size: .78rem; font-weight: 700; }
+.editor-styles-wrapper .slowfeeds-service-list span::before { content: ""; width: .4rem; height: .4rem; display: inline-block; margin-right: .6rem; background: var(--accent); border-radius: 50%; }
+.editor-styles-wrapper .slowfeeds-quote { margin: 6rem 0; padding: 0; border: 0; color: var(--ink); }
+.editor-styles-wrapper .slowfeeds-quote p { max-width: 39rem; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; line-height: 1.08; letter-spacing: -.035em; }
+.editor-styles-wrapper .slowfeeds-quote cite { display: block; margin-top: 1rem; color: var(--ink-soft); font-size: .7rem; font-style: normal; }
+.editor-styles-wrapper .slowfeeds-cta { padding: 2rem; color: var(--paper); background: var(--ink); border-radius: .65rem; }
+.editor-styles-wrapper .slowfeeds-cta h2 { color: inherit; font-size: clamp(2rem, 5vw, 3.4rem); }
+.editor-styles-wrapper .slowfeeds-cta > p { max-width: 30rem; margin-bottom: 1.5rem; color: #bdbdbd; }

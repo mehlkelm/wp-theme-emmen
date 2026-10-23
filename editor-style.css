@@ -5,21 +5,20 @@
   --paper: #ffffff;
   --rule: #111111;
   --rule-light: #d9d9d9;
-  --measure: 34rem;
 }
 
 .editor-styles-wrapper {
   color: var(--ink);
   background: var(--paper);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: clamp(16px, 14px + .55vw, 21px);
+  font-size: 18px;
   line-height: 1.5;
   font-feature-settings: "tnum";
 }
 
 .editor-styles-wrapper .wp-block-post-title,
 .editor-styles-wrapper > .is-root-container {
-  max-width: var(--measure);
+  max-width: 50rem;
   margin-inline: auto;
 }
 

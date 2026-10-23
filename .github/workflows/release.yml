@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check that the tag matches the theme version
+        run: |
+          version="$(sed -n 's/^Version: *//p' style.css | tr -d '\r')"
+          test "v$version" = "${GITHUB_REF_NAME}" || { echo "style.css says $version, tag is ${GITHUB_REF_NAME}"; exit 1; }
+
+      - name: Build emmen.zip
+        run: |
+          mkdir -p build/emmen
+          rsync -a --exclude-from=.distignore ./ build/emmen/
+          (cd build && zip -rq ../emmen.zip emmen)
+          unzip -l emmen.zip | head -20
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: emmen.zip
+          generate_release_notes: true

@@ -1,12 +1,15 @@
 /*
 Theme Name: Emmen
-Theme URI: https://stefan.pauwels.ch
+Theme URI: https://github.com/mehlkelm/wp-theme-emmen
 Author: Stefan Pauwels
-Description: An image-light blog theme in the Swiss / International Typographic Style. Strict grid, Helvetica, generous whitespace, green accent.
-Version: 1.0.4
+Author URI: https://stefan.pauwels.ch
+Description: An image-light blog theme in the Swiss / International Typographic Style. Strict grid, Helvetica, generous whitespace, configurable accent.
+Version: 1.2.0
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: emmen
+Update URI: https://github.com/mehlkelm/wp-theme-emmen
 */
 
 :root {
